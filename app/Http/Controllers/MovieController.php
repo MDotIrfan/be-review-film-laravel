@@ -81,7 +81,7 @@ class MovieController extends Controller
 
             // simpan gambar pada file storage
 
-            $uploadedFileUrl = Cloudinary::upload($request->file('file')->getRealPath())->getSecurePath();
+            $uploadedFileUrl = Cloudinary::upload($request->file('poster')->getRealPath())->getSecurePath();
 
             $data['poster'] = $uploadedFileUrl;
 
@@ -183,7 +183,7 @@ class MovieController extends Controller
 
             // $request->poster->storeAs('public/images', $imageName);
 
-            $uploadedFileUrl = Cloudinary::upload($request->file('file')->getRealPath())->getSecurePath();
+            $uploadedFileUrl = Cloudinary::upload($request->file('poster')->getRealPath())->getSecurePath();
 
             $data['poster'] = $uploadedFileUrl;
 
